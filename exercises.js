@@ -14,11 +14,29 @@ function FirstFactorial(num) {
   console.log(factorial);
 }
 
-FirstFactorial(10);
+FirstFactorial(3);
 
 
 // Function - SimpleAdding(num)
 // The function will take the num parameter and add up all the numbers from 1 to num.  For test cases, the parameter num will be any number from 1 to 1000.
+
+// let arry2 = [];
+// let sum = 0;
+
+function SimpleAdding(num) {
+  // Using the array method...
+  // for(i = 1; i <= num; i++) {
+  //   arry2.push(i);
+  // };
+  // for(f = 0; f < arry2.length; f++) {
+  //   sum += arry2[f];
+  // }
+  // console.log(sum);
+  num = num * (num+1)/2;
+  console.log(num);
+}
+
+SimpleAdding(3);
 
 // Function - LetterCapitalize(str)
 // The function will take the str parameter being passed and capitalize the first letter of each word.  Words will be separated by only one space.
