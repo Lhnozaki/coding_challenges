@@ -1,5 +1,21 @@
 // Function -  FirstFactorial(num)
-// The function will take the num parameter being passed and return the factorial of it (ie. if num =3, return(3 * 2 * 1)).  For test cases, the range will be between 1 and 18.
+// The function will take the num parameter being passed and return the factorial of it (ie. if num =3, return(3 * 2 * 1))For test cases, the range will be between 1 and 18.
+
+let arry1 = [];
+let factorial = 1;
+
+function FirstFactorial(num) {
+  for(i = 1; i <= num; i++) {
+    arry1.push(i);
+  };
+  for(j = 0; j < arry1.length; j++) {
+    factorial = factorial * arry1[j];
+  };
+  console.log(factorial);
+}
+
+FirstFactorial(10);
+
 
 // Function - SimpleAdding(num)
 // The function will take the num parameter and add up all the numbers from 1 to num.  For test cases, the parameter num will be any number from 1 to 1000.
