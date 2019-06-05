@@ -23,7 +23,7 @@ FirstFactorial(3);
 // let arry2 = [];
 // let sum = 0;
 
-function SimpleAdding(num) {
+//function SimpleAdding(num) {
   // Using the array method...
   // for(i = 1; i <= num; i++) {
   //   arry2.push(i);
@@ -32,14 +32,30 @@ function SimpleAdding(num) {
   //   sum += arry2[f];
   // }
   // console.log(sum);
+//}
+
+function SimpleAdding(num) {
   num = num * (num+1)/2;
   console.log(num);
 }
 
-SimpleAdding(3);
+SimpleAdding(10);
 
 // Function - LetterCapitalize(str)
 // The function will take the str parameter being passed and capitalize the first letter of each word.  Words will be separated by only one space.
+
+let thanos = "today i have lost more than you could ever know.";
+
+function LetterCapitalize(str) {
+  let arry = str.split(" ");
+  let arry2 = [];
+  for(i = 0; i < arry.length; i++) {
+   arry2.push(arry[i].charAt(0).toUpperCase() + arry[i].slice(1));
+  }
+  return arry2.join(" ");
+}
+
+console.log(LetterCapitalize(thanos));
 
 // Function rangeRover(arr)
 // The function will take an array of two numbers and return the sum of those two numbers AND all numbers between them.  The lowest number will not always come first.  For example rangeRover([1, 4]) should return 10, i.e.(1 + 2 + 3 + 4), rangeRover([4, 1]) should also return 10.
