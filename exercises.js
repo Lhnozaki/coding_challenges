@@ -98,6 +98,34 @@ rangeRover([1, 20]);
 // Function hailCaesar(num)
 // The function will take the num parameter and convert the given number into a roman numeral.  For example hailCaesar(2) should return "II", hailCaesar(5) should return "V".
 
+function hailCaesar(num) {
+  const numeral = {
+    M:1000,
+    CM:900,
+    D:500,
+    CD:400,
+    C:100,
+    XC:90,
+    L:50,
+    XL:40,
+    X:10,
+    IX:9,
+    V:5,
+    IV:4,
+    I:1};
+  let roman = '';
+  let i;
+  for (i in numeral) {
+    while ( num >= numeral[i] ) {
+      roman += i;
+      num -= numeral[i];
+    }
+  }
+  return roman;
+}
+
+console.log(hailCaesar(8));
+
 // Function spinalTap(str)
 // The function will convert a string to spinal case.  Spinal case is all-lowercase-words-joined-by-dashes.  For example spinalTap("I own this Taco Stand!") should return "i-own-this-taco-stand!".
 
