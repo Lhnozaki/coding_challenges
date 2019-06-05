@@ -20,19 +20,19 @@ FirstFactorial(3);
 // Function - SimpleAdding(num)
 // The function will take the num parameter and add up all the numbers from 1 to num.  For test cases, the parameter num will be any number from 1 to 1000.
 
-// let arry2 = [];
-// let sum = 0;
+    // let arry2 = [];
+    // let sum = 0;
 
-//function SimpleAdding(num) {
-  // Using the array method...
-  // for(i = 1; i <= num; i++) {
-  //   arry2.push(i);
-  // };
-  // for(f = 0; f < arry2.length; f++) {
-  //   sum += arry2[f];
-  // }
-  // console.log(sum);
-//}
+    //function SimpleAdding(num) {
+      // Using the array method...
+      // for(i = 1; i <= num; i++) {
+      //   arry2.push(i);
+      // };
+      // for(f = 0; f < arry2.length; f++) {
+      //   sum += arry2[f];
+      // }
+      // console.log(sum);
+    //}
 
 function SimpleAdding(num) {
   num = num * (num+1)/2;
@@ -110,3 +110,29 @@ console.log(spinalTap(thanos));
 
 // Function sumFibs(num)
 // The function will return the sum of all ODD Fibonacci numbers up to and including the passed number if it's a Fibonacci number.  The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, where the next number is found by adding up the two numbers before it.  For example subFibs(4) should return 5, sumbFibs(1000) should return 1785.
+
+function sumFibs(num) {
+  let arry = [];
+  let arryOdd = [];
+  let sum = 0;
+  for(i = 0; i <= num; i++) {
+    if(i === 0) {
+      arry.push(i);
+    } else if (i === 1) {
+      arry.push(i);
+    } else { 
+      arry.push(arry[i-2] + arry[i-1]);
+   };
+    if(arry[i] % 2 !== 0) {
+    arryOdd.push(arry[i]);
+    }
+  }
+  for(x = 0; x < arryOdd.length; x++) {
+    sum += arryOdd[x];
+  }
+  console.log(arry);
+  console.log(arryOdd);
+  console.log(sum);
+}
+
+sumFibs(4);
