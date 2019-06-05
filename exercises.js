@@ -60,8 +60,42 @@ console.log(LetterCapitalize(thanos));
 // Function rangeRover(arr)
 // The function will take an array of two numbers and return the sum of those two numbers AND all numbers between them.  The lowest number will not always come first.  For example rangeRover([1, 4]) should return 10, i.e.(1 + 2 + 3 + 4), rangeRover([4, 1]) should also return 10.
 
+function rangeRover(arr) {
+  let num1;
+  let num2;
+  let sum;
+  let Q1;
+  let Q2;
+  if(arr[0] > arr[1] && arr[1] !== 1) {
+    num1 = arr[0];
+    num2 = arr[1];
+    Q1 = num1 * (num1+1)/2;
+    Q2 = (num2 - 1) * num2 / 2;
+    sum = Q1 - Q2;
+  } else if(arr[0] > arr[1] && arr[1] === 1) {
+    num1 = arr[0];
+    num2 = arr[1];
+    sum = num1 * (num1+1)/2;
+  } else if (arr[0] < arr[1] && arr[0] !== 1){
+    num1 = arr[1];
+    num2 = arr[0];
+    Q2 = num1 * (num1+1)/2;
+    Q1 = (num2 - 1) * num2 / 2;
+    sum = Q2 - Q1;
+  } else {
+    num1 = arr[1];
+    num2 = arr[0];
+    sum = num1 * (num1+1)/2;
+  }
+  console.log(sum);
+}
+
+rangeRover([1, 20]);
+
 // Function missingLetter(str)
 // The function will find the missing letter passed in the parameter and return it.  If all letters are present in the string, the return will be undefined.  For example missingLetter("abce") should return "d", missingLetter("bcd") should return undefined.
+
+
 
 // Function hailCaesar(num)
 // The function will take the num parameter and convert the given number into a roman numeral.  For example hailCaesar(2) should return "II", hailCaesar(5) should return "V".
